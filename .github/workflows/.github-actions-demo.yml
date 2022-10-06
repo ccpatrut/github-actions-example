@@ -18,8 +18,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}.
       - name: My first step
         # Uses the default branch of a public repository
-        uses: actions/heroku@main
+        uses:  docker://alpine:3.8
+        with: 
+           echo: "echo from alpine ? "
 
-      - name: My second step
-        # Uses the default branch of a public repository
-        uses: actions/heroku@main
